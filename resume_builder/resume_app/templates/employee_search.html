@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Search</title>
+</head>
+
+<body>
+    <h1>Employee Search</h1>
+    <form method="post" action="{% url 'employee_search' %}">
+        {% csrf_token %}
+        <input type="text" name="search_query" placeholder="Enter employee ID or name" required>
+        <button type="submit">Generate Resume</button>
+    </form>
+</body>
+
+</html>
